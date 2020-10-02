@@ -33,13 +33,30 @@ $(document).ready(function() {
       }).then(function(response) {
        console.log(response)
 
+     
+
       var cityName = response.name;
       console.log(cityName)
-       
      
+      var cityWeather = response.main;
+      console.log(cityWeather)
+
+      for (var i = 0; i < cityWeather.length; i++) {
+      
+      var cityDiv = $("<div>");
+      
+      
+      var pTwo = $("<p>").cityName + cityWeather
+     
+      
+      cityDiv.append(pTwo);
+      
+      $("#weather-view").prepend(cityDiv);
+      }
     })
   
-   
      })
 
     })
+
+   
